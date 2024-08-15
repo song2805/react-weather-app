@@ -42,6 +42,9 @@ function App() {
     try {
       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}&units=metric`
       let response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      };
       let data = await response.json();
       console.log("response", data)
       setWeather(data);
