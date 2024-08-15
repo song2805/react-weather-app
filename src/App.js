@@ -98,8 +98,7 @@ function App() {
             loading={loading}
 
             size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader" />
+             />
         </div>
       ) : !apiError ? (
         <div className="weather-container">
