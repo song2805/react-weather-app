@@ -7,7 +7,8 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 // 1. 앱이 실행 되자마자 현재위치 기반의 날씨가 보인다
-const APIKey = process.env.REACT_APP_WEATHER_API_KEY;
+// const APIKey = process.env.REACT_APP_WEATHER_API_KEY;
+const APIKey = `4e53cc1fda3efd5c38df5b462e2dae98`
 
 function App() {
   //1.B. 
