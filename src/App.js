@@ -7,7 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 // 1. 앱이 실행 되자마자 현재위치 기반의 날씨가 보인다
-const APIKey = `4e53cc1fda3efd5c38df5b462e2dae98`;
+const APIKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 function App() {
   //1.B. 
@@ -36,6 +36,8 @@ function App() {
   // 1-A. 현재 위치 API 가져오기 함수 만들기
 
   const getWeatherByCurrentLocation = async (lat, lon) => {
+
+    const APIKey = process.env.REACT_APP_WEATHER_API_KEY;
 
     try {
       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}&units=metric`
